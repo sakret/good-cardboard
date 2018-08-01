@@ -1,6 +1,6 @@
 body {
-  background-color: #fff;
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff; }
 
 body {
   margin: 0; }
@@ -8,15 +8,16 @@ body {
 img {
   max-width: 100%; }
 
-input:focus, button:focus {
+input:focus,
+button:focus {
   outline: none; }
 
 .header-logo {
-  backgrpund: url(../img/h-logo.png) center no-repeat;
-  background-size: 100%;
   width: 191px;
   height: 61px;
-  padding: 15px 0; }
+  padding: 15px 0;
+  background-size: 100%;
+  backgrpund: url(../img/h-logo.png) center no-repeat; }
 
 .header-contacts {
   display: flex;
@@ -24,24 +25,24 @@ input:focus, button:focus {
   align-items: center; }
 
 .header__phones {
-  display: flex;
   font-size: 22px;
+  display: flex;
   margin-right: 13px; }
 
 .header__phone:first-child {
-  border-right: 1px solid #cfcfd0;
-  padding-right: 13px; }
+  padding-right: 13px;
+  border-right: 1px solid #cfcfd0; }
 
 .button {
   font-size: 14px;
-  background-color: #fd9c28;
-  border: none;
-  color: #fff;
   padding: 13px 22px;
-  border-radius: 5px; }
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  background-color: #fd9c28; }
   .button:hover {
-    background-color: #fda841;
-    cursor: pointer; }
+    cursor: pointer;
+    background-color: #fda841; }
   .button img {
     vertical-align: middle; }
   .button_big {
@@ -51,42 +52,42 @@ input:focus, button:focus {
 
 .main {
   position: relative;
+  z-index: 2;
   padding-top: 65px;
   padding-bottom: 60px;
-  background: #373737 url(../img/bg-1.jpg) center no-repeat;
-  background-size: cover;
   color: #fff;
-  z-index: 2; }
+  background: #373737 url(../img/bg-1.jpg) center no-repeat;
+  background-size: cover; }
   .main::before {
-    content: '';
-    display: block;
     position: absolute;
-    left: 0;
+    z-index: 0;
     top: 0;
+    left: 0;
+    display: block;
     width: 100%;
     height: 100%;
-    background-color: rgba 0, 0, 0, 0.6;
-    z-index: 0; }
+    content: '';
+    background-color: rgba 0, 0, 0, 0.6; }
     .main::before-img {
       position: relative; }
       .main::before-img::before {
-        content: '';
         position: absolute;
         z-index: -1;
+        left: 50%;
         width: 390px;
         height: 390px;
-        left: 50%;
         margin-left: -195px;
+        content: '';
         border: 1px solid #fff;
         border-radius: 50%; }
       .main::before-img-text__title {
-        margin-bottom: 20px;
+        font-weight: 700;
         font-style: 40px;
-        font-weight: 700; }
+        margin-bottom: 20px; }
       .main::before-img-text__subtitle {
-        margin-bottom: 27px;
+        font-weight: 300;
         font-style: 28px;
-        font-weight: 300; }
+        margin-bottom: 27px; }
       .main::before-img-text__form {
         padding: 30px 27px;
         background-color: rgba(255, 255, 255, 0.2); }
@@ -94,130 +95,130 @@ input:focus, button:focus {
         display: flex;
         margin-bottom: 12px; }
         .main::before-img-text .form-title {
-          margin-bottom: 20px;
-          padding-right: 87px;
           font-size: 20px;
           font-weight: 300;
-          line-height: 30px; }
-          .main::before-img-text .form-title__important {
-            font-weight: 700;
-            text-transform: uppercase;
-            display: block; }
-        .main::before-img-text .form__input {
+          line-height: 30px;
+          margin-bottom: 20px;
+          padding-right: 87px;
           margin-right: 10px;
           padding: 20px;
-          border-radius: 4px;
-          border: none;
           vertical-align: middle;
+          border: none;
+          border-radius: 4px;
           flex-basis: 50%; }
+          .main::before-img-text .form-title__important {
+            font-weight: 700;
+            display: block;
+            text-transform: uppercase; }
         .main::before-img-text .form-small {
           font-size: 14px;
           font-weight: 300; }
 
 .overlay {
   position: fixed;
-  display: none;
+  z-index: 3;
   top: 0;
+  display: none;
   width: 100%;
   height: 100%;
-  z-index: 3;
   background-color: rgba 0, 0, 0, 0.4; }
   .overlay .popup {
     position: fixed;
-    left: 50%;
     top: 100px;
+    left: 50%;
     width: 752px;
     transform: translateX(-50%); }
     .overlay .popup-close {
-      position: absolute;
-      right: -20px;
-      top: -30px;
       font-size: 35px;
-      color: #fff;
       font-weight: 300;
-      cursor: pointer; }
+      position: absolute;
+      top: -30px;
+      right: -20px;
+      cursor: pointer;
+      color: #fff; }
     .overlay .popup-title {
+      font-size: 21px;
+      font-weight: 500;
+      line-height: 71px;
       display: block;
       width: 100%;
       max-height: 71px;
       margin: 0;
-      background-color: #ff9d00;
-      color: #fff;
+      text-align: center;
       text-transform: uppercase;
-      line-height: 71px;
-      font-size: 21px;
-      font-weight: 500;
-      text-align: center; }
+      color: #fff;
+      background-color: #ff9d00; }
     .overlay .popup-form {
-      background: url(../img/form-bg.jpg) center no-repeat;
-      background-size: cover;
       padding: 35px 88px 50px 88px;
-      color: #fff; }
+      color: #fff;
+      background: url(../img/form-bg.jpg) center no-repeat;
+      background-size: cover; }
       .overlay .popup-form-header {
-        padding: 0;
         font-size: 30px;
         font-weight: 400;
         line-height: 27px;
-        text-align: center; }
-        .overlay .popup-form-header span {
-          font-style: 24px; }
-      .overlay .popup-form__label {
-        display: block;
-        margin-top: 23px;
+        padding: 0;
+        text-align: center;
         font-size: 20px;
         font-weight: 300;
-        line-height: 30px; }
+        line-height: 30px;
+        display: block;
+        margin-top: 23px; }
+        .overlay .popup-form-header span {
+          font-style: 24px; }
       .overlay .popup-form__input {
         width: 365px;
         height: 56px;
         margin-top: 17px; }
       .overlay .popup-form__btn {
-        width: 180px;
-        height: 56px;
-        margin-left: 16px;
         font-size: 15px;
         font-weight: 500;
         line-height: 22px;
+        width: 180px;
+        height: 56px;
+        margin-left: 16px;
         background-color: #ff9d00; }
       .overlay .popup-form__note {
-        margin-top: 9px;
         font-size: 14px;
         font-weight: 300;
         line-height: 30px;
+        margin-top: 9px;
         text-align: center; }
 
 @media (max-width: 576px) {
-  display: none;
-  .header {
-    background: #fd9c28 url(../img/header-logo__mobile.png) center no-repeat;
+  .hidden-mobile {
+    display: none; }
+  .header-logo {
     width: 35px;
     height: 35px;
     border-radius: 4px;
+    background: #fd9c28 url(../img/header-logo__mobile.png) center no-repeat; }
+  .header-contacts {
+    padding-top: 50px;
     text-align: center;
-    padding-top: 50px; }
-    .header__phone {
-      flex-direction: column;
+    display: block; }
+    .header-contacts__phone {
       font-size: 14px;
-      margin-right: 0;
-      border: none; }
-    .header__button {
-      display: inline-block;
-      padding: 9px; }
-    .header-text__title {
+      flex-direction: column;
+      margin-right: 0; }
+      .header-contacts__phone:first-child {
+        border: none; }
+        .header-contacts__phone:first-child__button {
+          display: inline-block;
+          padding: 9px; }
+    .header-contacts-text__title {
       font-size: 22px;
       color: #fd9c28; }
-    .header-text__subtitle {
+    .header-contacts-text__subtitle {
       font-size: 18px;
       margin-bottom: 40px; }
-    .header-text__form {
-      backgroundcolor: transparent;
-      padding: 10px; }
-    .header .form {
-      display: block; }
-      .header .form-title {
-        padding-right: 0;
-        font-size: 15px;
-        line-height: 1.4; }
-      .header .form__input {
-        display: block;
-        margin-bottom: 13px; } }
+    .header-contacts-text__form {
+      padding: 10px;
+      backgroundcolor: transparent; }
+    .header-contacts-title {
+      font-size: 15px;
+      line-height: 1.4;
+      padding-right: 0; }
+    .header-contacts__input {
+      display: block;
+      margin-bottom: 13px; } }
