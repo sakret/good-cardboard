@@ -27,9 +27,8 @@ button:focus {
     .header-contacts__phone {
       font-size: 22px;
       display: flex; }
-      .header-contacts__phone:first-child {
-        margin-right: 13px;
-        border-right: 1px solid #cfcfd0; }
+    .header-contacts__button {
+      margin-left: 15px; }
 
 .button {
   font-size: 14px;
