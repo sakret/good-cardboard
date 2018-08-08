@@ -14,12 +14,12 @@ button:focus {
 
 .header {
   margin: 20px 0 20px 0; }
-  .header__logo {
+  .header-logo {
+    background: url(../img/h-logo.png) center no-repeat;
+    background-size: 100%;
     width: 191px;
     height: 61px;
-    padding: 15px 0;
-    background-size: 100%;
-    background: url(../img/h-logo.png) center no-repeat; }
+    padding: 15px 0; }
   .header-contacts {
     display: flex;
     justify-content: flex-end;
@@ -100,8 +100,8 @@ button:focus {
     padding-right: 87px; }
     .form-title__important {
       font-weight: 700;
-      display: block;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      display: block; }
   .form__input {
     margin-right: 10px;
     padding: 20px;
@@ -185,40 +185,43 @@ button:focus {
         margin-top: 9px;
         text-align: center; }
 
-@media (max-width: 576px) {
+@media (max-width: 700px) {
   .hidden-mobile {
     display: none; }
   .header-logo {
+    background: #fd9c28 url(../img/header-logo__mobile.png) center no-repeat;
     width: 35px;
     height: 35px;
-    border-radius: 4px;
-    background: #fd9c28 url(../img/header-logo__mobile.png) center no-repeat; }
+    border-radius: 4px; }
   .header-contacts {
-    padding-top: 50px;
-    text-align: center;
-    display: block; }
+    display: flex; }
     .header-contacts__phone {
+      display: block; }
+    .header-contacts__phones {
       font-size: 14px;
-      flex-direction: column;
-      margin-right: 0; }
-      .header-contacts__phone:first-child {
-        border: none; }
-        .header-contacts__phone:first-child__button {
-          display: inline-block;
-          padding: 9px; }
-    .header-contacts-text__title {
+      font-color: #fff;
+      flex-direction: column; }
+    .header-contacts__button {
+      padding: 9px; }
+  .main {
+    padding-top: 30px;
+    text-align: center; }
+    .main-text__title {
       font-size: 22px;
       color: #fd9c28; }
-    .header-contacts-text__subtitle {
+    .main-text__subtitle {
       font-size: 18px;
       margin-bottom: 40px; }
-    .header-contacts-text__form {
+    .main-text__form {
       padding: 10px;
       backgroundcolor: transparent; }
-    .header-contacts-title {
+  .form {
+    display: block; }
+    .form-title {
       font-size: 15px;
       line-height: 1.4;
       padding-right: 0; }
-    .header-contacts__input {
+    .form__input {
       display: block;
+      margin-left: 15px;
       margin-bottom: 13px; } }

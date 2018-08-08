@@ -1,43 +1,44 @@
-@media (max-width: 576px)
+@media (max-width: 700px)
     .hidden-mobile
         display: none
     .header
-        &-logo
+        &-logo          
+            background: $active-color url(../img/header-logo__mobile.png) center no-repeat
             width: 35px
             height: 35px
-            border-radius: 4px            
-            background: $active-color url(../img/header-logo__mobile.png) center no-repeat
+            border-radius: 4px
         &-contacts
+            display: flex
             &__phone
-                font-size: 14px
-                flex-direction: column
-                margin-right: 0
-                &:first-child
-                    border: none
-                    &__button
-                        display: inline-block
-                        padding: 9px
-                    .main
-            padding-top: 50px
-            text-align: center
-            &-text
-                &__title
-                    font-size: 22px
-                    color: $active-color
-                &__subtitle
-                    font-size: 18px
-                    margin-bottom: 40px
-                &__form
-                    padding: 10px
-                    backgroundcolor: transparent
-                .form
-            display: block
-            &-title
-                font-size: 15px
-                line-height: 1.4
-                padding-right: 0
-            &__input
                 display: block
-                margin-bottom: 13px
+            &__phones
+                font-size: 14px
+                font-color: #fff
+                flex-direction: column
+            &__button
+                padding: 9px
+    .main
+        padding-top: 30px
+        text-align: center
+        &-text
+            &__title
+                font-size: 22px
+                color: $active-color
+            &__subtitle
+                font-size: 18px
+                margin-bottom: 40px
+            &__form
+                padding: 10px
+                backgroundcolor: transparent
+    .form
+        display: block
+        &-title
+            font-size: 15px
+            line-height: 1.4
+            padding-right: 0
+        &__input
+            display: block
+            margin-left: 15px
+            margin-bottom: 13px
 
 
