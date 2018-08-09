@@ -1,19 +1,65 @@
+.section
+    &-title
+        font-size: 27px
+        font-weight: 700
+        color: #313131
+        text-transform: uppercase
+        text-align: center
+        margin-bottom: 29px
+        &::after
+            content: ''
+            margin-top: 12px
+            display: block
+            height: 6px
+            background: url(../img/wave.png) center no-repeat
 .button
     font-size: 14px
     padding: 13px 22px
     color: $text-color-light
-    border: none
+    border: 1px solid transparent
     border-radius: 5px
     background-color: $active-color
     &:hover
         cursor: pointer
         background-color: lighten($active-color, 5)
+    &-o
+        background-color: transparent
+        color: $text-color-dark
+        border: 1px solid rgba(#373737, 0.5)
+        opacity: 0.4
+        &:hover
+            background-color: $active-color
+            color: $text-color-light
+            border: 1px solid transparent
+            cursor: pointer
     img
         vertical-align: middle
     &_big
         padding-top: 18px
         padding-bottom: 18px
         vertical-align: middle
+.slider-arrow
+    position: absolute
+    top: 0
+    z-index: 99
+    height: 100%
+    width: 22px    
+    &_prod
+        border: 1px solid $active-color
+    &:hover
+        cursor: pointer
+    &__right
+        background: #fff url(../img/arrow-right.png) center no-repeat
+        &:hover
+            background: $active-color url(../img/arrow-right_active.png) center no-repeat
+        right: 0
+    &__left
+        background: #fff url(../img/arrow-left.png) center no-repeat
+        &:hover
+            background: $active-color url(../img/arrow-left_active.png) center no-repeat
+        left: 0
+
+
 
         
 

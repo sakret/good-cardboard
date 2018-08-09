@@ -3,7 +3,7 @@ var bs = require('browser-sync');
 var sass = require('gulp-sass');
 var gutil = require( 'gulp-util' );
 var ftp = require( 'vinyl-ftp' );
-
+var autoprefixer = require('gulp-autoprefixer');
 
 // Запускаем сервер, предварительно скопилировав SASS
 gulp.task('serve', ['sass'], function() {
@@ -20,6 +20,10 @@ gulp.task('serve', ['sass'], function() {
 gulp.task('sass', function() {
  return gulp.src("src/sass/*.sass")
    .pipe(sass())
+   .pipe(autoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: false
+        }))
    .pipe(gulp.dest("src/css"))
    .pipe(bs.stream());
 });
